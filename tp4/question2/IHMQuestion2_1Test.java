@@ -1,5 +1,4 @@
 package question2;
-
 import java.awt.Robot;
 import java.awt.*;
 import java.awt.event.*;
@@ -18,18 +17,13 @@ public class IHMQuestion2_1Test extends junit.framework.TestCase
         try{  
             Class.forName("question2.IHMQuestion2_1");
             Class.forName("question2.JButtonObserver");
-            //Class.forName("question2.JMouseObserver");
+            Class.forName("question2.JMouseObserver");
         }catch(ClassNotFoundException e){
             fail("classe absente " + e.getMessage());
         }
     }
 
 
-    /**
-     * Met en place les engagements.
-     *
-     * Méthode appelée avant chaque appel de méthode de test.
-     */
     protected void setUp() throws java.lang.Exception{
         f = new IHMQuestion2_1();
         f.pack();

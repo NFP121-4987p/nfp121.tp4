@@ -21,23 +21,18 @@ public class IHMQuestion2_2 extends JFrame {
         enHaut.add(boutonC);
         setLayout(new BorderLayout(5, 5));
         add("North", enHaut);
-        add("Center", contenu); // contenu sera transmis aux observateurs, voir
-                                // la description des constructeurs
+        add("Center", contenu);
         setLocation(150,150);pack();show();
         enHaut.setBackground(Color.magenta);
-        
-
-        // à compléter à l'identique de la question 2_1, (du copier/coller)...
-        // le bouton A a 3 observateurs jbo1, jbo2 et jbo3
-
-        // le bouton B a 2 observateurs jbo1 et jbo2
-
-        // le bouton C a 1 observateur jbo1
-
-        // à compléter pour la question 2_2 (JMouseObserver)
-            // le bouton A a 1 observateur jmo1
-            // le bouton B a 1 observateur jmo2
-            // le bouton C a 1 observateur jmo3
+        boutonA.addActionListener(new JButtonObserver("jbo1", contenu));
+        boutonA.addActionListener(new JButtonObserver("jbo2", contenu));
+        boutonA.addActionListener(new JButtonObserver("jbo3", contenu));
+        boutonB.addActionListener(new JButtonObserver("jbo1", contenu));
+        boutonB.addActionListener(new JButtonObserver("jbo2", contenu));
+        boutonC.addActionListener(new JButtonObserver("jbo1", contenu));
+        boutonA.addMouseListener(new JMouseObserver("jmo1", contenu));
+        boutonB.addMouseListener(new JMouseObserver("jmo2", contenu));
+        boutonC.addMouseListener(new JMouseObserver("jmo3", contenu)); 
         
     }
     
